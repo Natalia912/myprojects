@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+body {
+    max-width: 700px;
+    min-width: 300px;
+    margin: 30px auto;
+    padding: 0 10px;
+    background-color: #948BA1;
+    color: #FFFEFC;
+}
+h1, p {
+    text-align: center;
+    text-shadow: black 0 0 3px;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 5px;
+}
+
+form {
+    padding: 20px 20px;
+    font-size: 18px;
+    background-color: #431A66;
+}
+
+label {
+    font-size: 18px;
+    display: block;
+    padding: 0 0 5px 0;
+}
+
+input {
+    width: 100%;
+    border-style: none;
+    border-radius: 5rem;
+}
+textarea {
+    margin-top: 5px;
+    width: 100%;
+    border-style: none;
+    min-height: 5em;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+#submit {
+    display: block;
+    width: 40%;
+    margin: 10px auto ;
+    height: 2em;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+    background-color: #FFFEFC;
+    border: 2px solid #948BA1
+}
+#submit:hover {
+    background-color: #948BA1;
+    color: #FFFEFC;
+    transition-duration: 0.2s;
+}
+
+#first-field input {
+    margin: 5px 0 10px 0;
+    width: 100%;
+    min-height: 2em;
+    padding-left: 10px;
+}
+
+#dropdown {
+    margin: 5px 0 15px 0;
+    width: fit-content;
+    min-height: 2em;
+    padding-left: 5px;
+    border-radius: 5rem;
+}
