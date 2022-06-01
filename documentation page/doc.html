@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./images/file.png" type="image/x-icon">
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+            <h2>HTML Accessibility</h2>
+        </header>
+        <ul>
+            <li><a class="nav-link" href="#HTML_Accessibility">HTML Accessibility</a></li>
+            <li><a class="nav-link" href="#Semantic_HTML">Semantic HTML</a></li>
+            <li><a class="nav-link" href="#Headings_Are_Important">Headings Are Important</a></li>
+            <li><a class="nav-link" href="#Alternative_Text">Alternative Text</a></li>
+            <li><a class="nav-link" href="#Declare_the_Language">Declare the Language</a></li>
+            <li><a class="nav-link" href="#Use_Clear_Language">Use Clear Language</a></li>
+            <li><a class="nav-link" href="#Create_Good_Link_Text">Create Good Link Text</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+
+        <h1>HTML Accessibility</h1>
+
+        <section class="main-section" id="HTML_Accessibility">
+            <header><h2>HTML Accessibility</h2></header>
+            <article>
+               <p>Always write HTML code with accessibility in mind!</p>
+               <p>Provide the user a good way to navigate and interact with your site. Make your HTML code as <strong>semantic</strong> as possible.</p> 
+            </article>
+        </section>
+
+        <section class="main-section" id="Semantic_HTML">
+            <header><h2>Semantic HTML</h2></header>
+            <article>
+                <p>Semantic HTML means using correct HTML elements for their correct purpose as much as possible. Semantic elements are elements with a meaning; if you need a button, use the <span class="codeline">&lt;button&gt;</span> element (and not a <span class="codeline">&lt;div&gt;</span> element).</p>
+                <div class="codeblock">
+                    <h3>Semantic</h3>
+                    <code>&lt;button&gt;Report an Error&lt;/button&gt;</code>
+                </div>
+                <div class="codeblock">
+                    <h3>Non-Semantic</h3>
+                    <code>&lt;div&gt;Report an Error&lt;/div&gt;</code>
+                </div>
+                <p>Semantic HTML gives context to screen readers, which read the contents of a page out loud.</p>
+                <p>With the button example in mind:</p>
+                <ul>
+                    <li>buttons have more suitable styling by default</li>
+                    <li>a screen reader identifies it as a button</li>
+                    <li>focusable</li>
+                    <li>clickable</li>
+                </ul>
+                <p>A button is also accessible for people relying on keyboard-only navigation; it can be clickable with both mouse and keys, and it can be tabbed between (using the tab key on the keyboard).</p>
+                <p>Examples of <strong>non-semantic</strong> elements: <span class="codeline">&lt;div&gt;</span> and <span class="codeline">&lt;span&gt;</span> - Tells nothing about its content.</p>
+                <p>Examples of <strong>semantic</strong> elements: <span class="codeline">&lt;form&gt;</span>, <span class="codeline">&lt;table&gt;</span>, and <span class="codeline">&lt;article&gt;</span> - Clearly defines its content.</p>
+            </article> 
+        </section>
+
+        <section class="main-section" id="Headings_Are_Important">
+            <header><h2>Headings Are Important</h2></header>
+            <article>
+                <p>Headings are defined with the <span class="codeline">&lt;h1&gt;</span> to <span class="codeline">&lt;h6&gt;</span> tags:</p>
+                <div class="codeblock">
+                    <h3>Example</h3>
+                    <code>
+                        &lt;h1&gt;Heading 1&lt;/h1&gt; <br>
+                        &lt;h2&gt;Heading 2&lt;/h2&gt; <br>
+                        &lt;h3&gt;Heading 3&lt;/h3&gt; <br>
+                        &lt;h4&gt;Heading 4&lt;/h4&gt; <br>
+                        &lt;h5&gt;Heading 5&lt;/h5&gt; <br>
+                        &lt;h6&gt;Heading 6&lt;/h6&gt;
+                    </code>
+                </div>
+                <p>Search engines use the headings to index the structure and content of your web pages.</p>
+                <p>Users skim your pages by its headings. It is important to use headings to show the document structure and the relationships between different sections.</p>
+                <p>Screen readers also use headings as a navigational tool. The different types of heading specify the outline of the page. <span class="codeline">&lt;h1&gt;</span> headings should be used for main headings, followed by <span class="codeline">&lt;h2&gt;</span> headings, then the less important <span class="codeline">&lt;h3&gt;</span>, and so on.</p>  
+            </article>
+        </section>
+
+        <section class="main-section" id="Alternative_Text">
+            <header><h2>Alternative Text</h2></header>
+            <article>
+               <p>The <span class="codeline">alt</span> attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the <span class="codeline">src</span> attribute, or if the user uses a screen reader).</p>
+               <p>The value of the <span class="codeline">alt</span> attribute should describe the image:</p> 
+               <div class="codeblock">
+                   <h3>Example</h3>
+                   <code>&lt;img src="img_chania.jpg" alt="A narrow city street with flowers in Chania"&gt;</code>
+               </div>
+               <p>If a browser cannot find an image, it will display the value of the <span class="codeline">alt</span> attribute.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Declare_the_Language">
+            <header><h2>Declare the Language</h2></header>
+            <article>
+                <p>You should always include the <span class="codeline">lang</span> attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+                <p>The following example specifies English as the language:</p>
+                <div class="codeblock">
+                    <code>
+                        &lt;!DOCTYPE html&gt; <br>
+                        &lt;html lang="en"&gt; <br>
+                        &lt;body&gt; <br>
+                        <br>
+                        ...
+                        <br>
+                        <br>
+                        &lt;/body&gt; <br>
+                        &lt;/html&gt;
+                    </code>
+                </div>
+            </article>
+        </section>
+
+        <section class="main-section" id="Use_Clear_Language">
+            <header><h2>Use Clear Language</h2></header>
+            <article>
+                <p>Always use a clear language, that is easy to understand. Also try to avoid characters that cannot be read clearly by a screen reader. For example:</p>
+                <ul>
+                    <li>Keep sentences as short as possible</li>
+                    <li>Avoid dashes. Instead of writing 1-3, write 1 to 3</li>
+                    <li>Avoid abbreviations. Instead of writing Feb, write February</li>
+                    <li>Avoid slang words</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Create_Good_Link_Text">
+            <header><h2>Create Good Link Text</h2></header>
+            <article>
+                <p>A link text should explain clearly what information the reader will get by clicking on that link.</p>
+                <p>Examples of good and bad links:</p>
+                <div class="codeblock">
+                    <h3>Good</h3>
+                    <code>
+                        <a href="" class="blanklink">Find out more about the HTML language</a> <br>
+                        <br>
+                        Read more about <a href=""class="blanklink">how to eat healthy</a> <br>
+                        <br>
+                        <a href="" class="blanklink">Buy tickets to Mars here</a>
+                    </code>
+                </div>
+                <div class="codeblock">
+                    <h3>Bad</h3>
+                    <code>
+                        <a href="" class="blanklink">Click here</a> <br>
+                        <br>
+                        <a href="" class="blanklink">Read more..</a> <br>
+                        <br>
+                        Buy tickets to Mars <a href="" class="blankline">here</a>
+                    </code>
+                </div>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header><h2>Reference</h2></header>
+            <article>
+                <p>All the documentation in this page is taken from <a href="https://www.w3schools.com/html/html_accessibility.asp" id="ref-link">W3Schools</a></p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

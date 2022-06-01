@@ -1,0 +1,176 @@
+/* AT LEAST 1 media query */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  color: rgb(36, 33, 33)
+}
+
+
+
+/* NAVIGATION BAR */
+
+nav {
+  padding: 0;
+  background-color: rgb(232, 232, 232);
+}
+
+nav > header {
+  height: 70px;
+  margin-top: 20px;
+  margin-bottom: -15px;
+}
+
+nav > header > h2 {
+  margin: 10px;
+  font-size: 1.4rem;
+}
+
+nav > ul {
+  height: 80vh;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul > li {
+  list-style: none;
+  margin: 0 auto;
+  border-top: 2px solid rgb(92, 91, 91);
+  background-color: rgb(181, 183, 183);
+  font-size: 1.2rem;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+}
+
+nav > ul > li > a {
+  color: rgb(36, 33, 33);
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  color: rgb(181, 183, 183);
+  background-color: rgb(36, 33, 33);
+  padding: 5px 10px;
+  transition-duration: 0.2s;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+  background-color: ghostwhite;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+section:not(:last-of-type) {
+  border-bottom: 2px solid rgb(92, 91, 91);
+  padding-bottom: 10px;
+}
+
+.codeblock {
+  background-color: rgb(181, 183, 183);
+  padding: 10px;
+  margin: 2px;
+}
+
+.codeline {
+  background-color: rgb(181, 183, 183);
+  padding: 0 2px;
+}
+
+.codeblock > code {
+  background-color: ghostwhite;
+  display: block;
+  padding: 10px;
+}
+
+#ref-link {
+  background-color: ghostwhite;
+  color: rgb(36, 33, 33);
+  padding: 2px 4px;
+}
+
+#ref-link:hover {
+  color: ghostwhite;
+  background-color: rgb(36, 33, 33);
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 750px) {
+
+  body {
+    flex-direction: column;
+
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+  nav > ul {
+    border: 2px solid rgb(92, 91, 91);
+    height: fit-content;
+    max-width: 600px;
+    width: 90%;
+  }
+
+  nav > ul:not(first-child) {
+    border-top: unset;
+  }
+
+  
+
+  main {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 751px) {
+
+  nav {
+    position: fixed;
+    height: 100vh;
+    width: 280px;
+    border-right: 2px solid rgb(92, 91, 91);
+  }
+
+  nav > ul > li:last-of-type {
+    border-bottom: 2px solid rgb(92, 91, 91);
+  }
+
+  nav > ul > li {
+    height: 50px;
+  }
+
+
+  main {
+  margin-left: 280px;
+  padding-left: 10px;
+}
+}
+
+
+
+
