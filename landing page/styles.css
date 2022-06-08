@@ -1,61 +1,168 @@
-/* Your Product Landing Page should use at least one media query.
-Your #nav-bar should always be at the top of the viewport.
-Your Product Landing Page should use CSS Flexbox at least once. */
-@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-family: 'Joan', serif;
-  font-size: 20px;
-}
 
 body {
-  background-color: #F2EBE9;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #614051;
 }
 
-#header-img {
-  width: 50px;
-  height: auto;
-  margin: 10px;
+.divider {
+    border-bottom: 2px solid #614051;
+    box-shadow: 2px 2px 6px #3b202f;
+    width: 900px;
+    margin: 0 auto;
 }
 
-#header-title {
-  margin-right: 10px;
-  display: inline-block;
+#BIO, #ART {
+    height: 100px;
 }
 
-#nav-bar {
-  display: flex;
-  flex-direction: row;
-  max-width: 100vw;
-  max-height: 150px;
-  background-color: rgb(137, 198, 205);
-  justify-content: space-between;
-  align-items: center;
-  
+/* NAVIGATION AND HEADING */
+
+.headnav {
+    display: flex;
+    background-color: #DEB6AB;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-#nav-bar > ul {
-  display: flex;
-  flex-direction: row;
-  justify-self: right;
-  max-width: 500px;
-  width: 70%;
-  justify-content: space-evenly;
-  align-items: center;
+.headnav a {
+    text-decoration: none;
+    color: #3b202f;
+    padding: 5px 10px;
+    transition-duration: 0.3s;
 }
 
-#nav-bar > ul > li {
-  list-style: none;
-  margin-right: 10px;
+.headnav a:hover {
+    background-color: #3b202f;
+    color: #DEB6AB;
 }
 
-#nav-bar > ul > li > a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
+h1 {
+    text-align: center;
+    margin: 0 10px;
+}
+
+nav {
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+}
+nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: block;
+    list-style: none;
+    margin: 0px auto;
+}
+
+/* BIOGRAPHY AND GALLERY SECTIONS */
+
+.all-info {
+    background-color: #F8ECD1;
+    max-width: 1000px;
+    margin: 0px auto;
+    padding-bottom: 20px;
+}
+
+.biography h2,h3, figcaption {
+    text-align: center;
+}
+.biography {
+    text-align: justify;
+    padding: 69px 40px 0px;
+}
+
+#tribute-info > ul > li {
+    list-style: disc;
+    margin: 20px auto 0;
+}
+#tribute-info > ul {
+    margin: 30px 50px 20px;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.gallery h2 {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.paintings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#im1 {
+    width: 80%;
+    max-width: fit-content;
+    height: auto;
+}
+
+#im7 {
+    height: 400px;
+    width: auto;
+}
+#im1, #im2, #im3, #im4, #im5, #im6, #im7 {
+    box-shadow: 5px 5px 10px #3b202f;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    max-width: 1000px;
+    height: 95px;
+    background-color: #DEB6AB;
+    margin: 0 auto;
+    padding-top: 10px;
+    overflow: hidden;
+}
+footer p {
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* MEDIA */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .headnav, footer{
+        height: 80px;
+    }
+
+    .biography {
+        padding: 55px 40px 10px;
+    }
+
+    #tribute-info > ul {
+        margin: 10px 20px;
+    }
 }
